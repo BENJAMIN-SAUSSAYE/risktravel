@@ -15,12 +15,42 @@ class HomeController extends AbstractController
         $listArmes = $homeManager->getArmes();
         $listCountriesRisk = $homeManager->getCountryRisk();
         $gauges = $homeManager->getGauges();
+        $listCountries = $homeManager->getEuropeanCountries();
+
+        $errors = [];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = array_map("trim", $_POST);
+
+            if (empty($data['country-starting'])) {
+                $errors[] = "Veuillez renseigner le pays de départ";
+            }
+
+            if (empty($data['country-destination'])) {
+                $errors[] = "Veuillez renseigner le pays d'arrivé";
+            }
+
+            if (empty($errors)) {
+                // $riskScore = explode("|", $data['country-destination'])[1];
+                // $countryDestination = explode("|", $data['country-destination'])[0];
+                // $countryStarting = $data['country-starting'];
+                // $kiloMeters = $homeManager->getDistance($countryDestination, $countryStarting);
+                // $cardsRiskAnimal = $homeManager->getRandomRisk($homeManager->getAnimals(), true, $riskScore);
+                // $cardsRiskArm = $homeManager->getRandomRisk($homeManager->getArmes(), true, $riskScore);
+                // $gaugeRisk = $homeManager->getRandomRisk($homeManager->getGauges(), true, $riskScore);
+                // $walkDays = $homeManager->getWalkDays($kiloMeters);
+            }
+        }
 
         return $this->twig->render('Home/index.html.twig', [
+            'errors' => $errors,
+            'listCountries' => $listCountries,
             'listCountriesRisk' => $listCountriesRisk,
+            // TODO renommer listAnimals, listArmes et gauges par les nouvelles variables du dessus
             'listAnimals' => $listAnimals,
             'listArmes' => $listArmes,
-            'gauges' => $gauges
+            'gauges' => $gauges,
+            // 'kiloMeters' => $kiloMeters,
+            // 'walkDays' =>  $walkDays,
         ]);
     }
 }

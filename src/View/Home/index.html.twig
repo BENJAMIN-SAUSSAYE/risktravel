@@ -18,35 +18,33 @@
 	<main role="main">
 		<div class="container py-4">
 			<div class="row justify-content-between align-items-center">
-				<div
-					class="col-md-12 shadow-sm rounded">
+				<div class="col-md-12 shadow-sm rounded">
 
-					<!--dropdown DEPART  -->
-					<div class="input-group mb-3">
-						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							{% for listCountry in listCountries %}
-								<option selected>{{ listCountry.name }}</option>
-							{% endfor %}
-						</select>
-					</div>
-					<!--dropdown DEPART  -->
+					<form method="POST">
+						<div class="input-group mb-3">
+							<select class="form-select form-select-lg mb-3" name="country-starting" aria-label=".form-select-lg example">
+								{% for listCountry in listCountries %}
+									<option value="{{ listCountry.name }}">{{ listCountry.name }}</option>
+								{% endfor %}
+							</select>
+						</div>
 
-					<!--dropdown ARRIVEE  -->
-					<div class="input-group mb-3">
-						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							{% for listCountryRisk in listCountriesRisk %}
-								{% if listCountryRisk['score'] >= 3 %}
-									<option selected>{{ listCountryRisk['name'] }}</option>
-								{% endif %}
-							{% endfor %}
-						</select>
-					</div>
+						<div class="input-group mb-3">
+							<select class="form-select form-select-lg mb-3" name="country-destination" aria-label=".form-select-lg example">
+								{% for listCountryRisk in listCountriesRisk %}
+									{% if listCountryRisk.score >= 3 %}
+										<option value="{{ listCountryRisk.name ~ "|" ~ listCountryRisk.score }}">{{ listCountryRisk.name }}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
+						</div>
 
-					<!--dropdown ARRIVEE  -->
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">Valider</a>
-					</p>
+						<div class="container pb-2">
+							<button class="btn btn-primary">Primary</button>
+						</div>
+					</form>
 				</div>
+				<hr>
 			</div>
 			<hr>
 		</div>
