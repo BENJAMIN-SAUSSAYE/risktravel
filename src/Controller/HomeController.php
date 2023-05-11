@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\ActualityManager;
 use App\Controller\AbstractController;
+use App\Model\HomeManager;
 
 class HomeController extends AbstractController
 {
@@ -12,6 +13,11 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        //CALL API FROM HomeManager--> return ARRAY from JSON
+        $homemanager = new HomeManager();
+        $listCountriesRisk = $homemanager->getCountryRisk();
+
+
+        return $this->twig->render('Home/index.html.twig', ['listCountriesRisk' => $listCountriesRisk]);
     }
 }
