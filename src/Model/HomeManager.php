@@ -4,12 +4,6 @@ namespace App\Model;
 
 class HomeManager extends AbstractManager
 {
-    /*public function getCountryRisk() : ?array
-    {
-        //TODO CALL API 
-        return new array();
-    }*/
-
     public function getEuropeanCountries(): ?array
     {
         return [
