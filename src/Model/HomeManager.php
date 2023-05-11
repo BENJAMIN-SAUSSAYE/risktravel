@@ -2,8 +2,41 @@
 
 namespace App\Model;
 
+use Symfony\Component\HttpClient\HttpClient;
+
 class HomeManager extends AbstractManager
 {
+    public function getCountryRisk(): array
+    {
+        //TODO CALL API
+        $client = HttpClient::create();
+
+        $response = $client->request('GET', 'https://www.travel-advisory.info/api');
+        $statusCode = $response->getStatusCode();
+        $type = $response->getHeaders()['content-type'][0];
+        $countries = [];
+
+        if ($statusCode === 200 && $type === "application/json; charset=utf-8") {
+            $countries = $response->getContent();
+
+            $countries = $response->toArray();
+
+            if (!empty($countries)) {
+                $countriesList = [];
+
+                foreach ($countries['data'] as $country) {
+                    $isoAlpha2 = $country['iso_alpha2'];
+                    $name = $country['name'];
+                    $score = $country['advisory']['score'];
+
+                    $countriesList[] = array('iso_alpha2' => $isoAlpha2, 'name' => $name, 'score' => $score);
+                    $countries = $countriesList;
+                }
+            }
+        }
+        return $countries;
+    }
+
     public function getEuropeanCountries(): ?array
     {
         return [
