@@ -24,10 +24,9 @@
 					<!--dropdown DEPART  -->
 					<div class="input-group mb-3">
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							<option selected>Depart...</option>
-							<option value="Allemagne">Allemagne</option>
-							<option value="France">France</option>
-							<option value="Italie">Italie</option>
+							{% for listCountry in listCountries %}
+								<option selected>{{ listCountry.name }}</option>
+							{% endfor %}
 						</select>
 					</div>
 					<!--dropdown DEPART  -->
@@ -35,10 +34,11 @@
 					<!--dropdown ARRIVEE  -->
 					<div class="input-group mb-3">
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							<option selected>Arrivée...</option>
-							<option value="Congo">Congo</option>
-							<option value="Russie">Russie</option>
-							<option value="Chine">Chine</option>
+							{% for listCountryRisk in listCountriesRisk %}
+								{% if listCountryRisk['score'] >= 3 %}
+									<option selected>{{ listCountryRisk['name'] }}</option>
+								{% endif %}
+							{% endfor %}
 						</select>
 					</div>
 
@@ -52,6 +52,12 @@
 		</div>
 		{% block gauge %}
 			{% include '/Component/_gauge.html.twig' %}
+		{% endblock %}
+		{% block animal %}
+			{% include 'Component/_animal.html.twig' %}
+		{% endblock %}
+		{% block arme %}
+			{% include 'Component/_arme.html.twig' %}
 		{% endblock %}
 	</main>
 {% endblock %}

@@ -1,0 +1,9 @@
+{% for listArme in listArmes %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ "assets/images/" ~ listArme.img }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ listArme.name }}</h5>
+    <p class="card-text">{{ listArme.description }}</p>
+  </div>
+</div>
+{% endfor %}
