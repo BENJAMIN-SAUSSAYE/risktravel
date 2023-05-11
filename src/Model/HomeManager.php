@@ -41,11 +41,11 @@ class HomeManager extends AbstractManager
     public function getGauges(): array
     {
         return [
-            '1' => 'illness',
-            '2' => 'natural disaster',
+            '1' => 'Maladie',
+            '2' => 'Catastrophe naturelle',
             '3' => 'Contamination radioactive',
-            '4' => 'kidnap sequestration',
-            '5' => 'receive projectiles',
+            '4' => 'Séquestration par enlèvement',
+            '5' => 'Recevoir des projectiles',
         ];
     }
 }

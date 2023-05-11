@@ -10,8 +10,8 @@ class HomeController extends AbstractController
 {
     public function index(): string
     {
-        $homemanager = new HomeManager();
-        $gauges = $homemanager->getGauges();
+        $homeManager = new HomeManager();
+        $gauges = $homeManager->getGauges();
 
         return $this->twig->render(
             'Home/index.html.twig',
