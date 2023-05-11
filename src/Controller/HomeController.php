@@ -14,9 +14,11 @@ class HomeController extends AbstractController
                 $listAnimals = $homeManager->getAnimals();
                 $listArmes = $homeManager->getArmes();
                 $listCountriesRisk = $homeManager->getCountryRisk();
+                // $listItineraires = $homeManager->getItineraire();
 
                 return $this->twig->render('Home/index.html.twig', [
                         'listCountriesRisk' => $listCountriesRisk,
+                        // 'listItineraires' => $listItineraires,
                         'listAnimals' => $listAnimals,
                         'listArmes' => $listArmes
                 ]);
