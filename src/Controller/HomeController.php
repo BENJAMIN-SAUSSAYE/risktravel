@@ -14,6 +14,7 @@ class HomeController extends AbstractController
         $listAnimals = $homeManager->getAnimals();
         $listArmes = $homeManager->getArmes();
         $listCountriesRisk = $homeManager->getCountryRisk();
+        $gauges = $homeManager->getGauges();
         $listCountries = $homeManager->getEuropeanCountries();
 
         $errors = [];
@@ -44,10 +45,10 @@ class HomeController extends AbstractController
             'errors' => $errors,
             'listCountries' => $listCountries,
             'listCountriesRisk' => $listCountriesRisk,
-            // TODO renommer listAnimals et listArmes par les nouvelles variables du dessus
+            // TODO renommer listAnimals, listArmes et gauges par les nouvelles variables du dessus
             'listAnimals' => $listAnimals,
             'listArmes' => $listArmes,
-            // 'gauges' => $gaugesRisk,
+            'gauges' => $gauges,
             // 'kiloMeters' => $kiloMeters,
             // 'walkDays' =>  $walkDays,
         ]);

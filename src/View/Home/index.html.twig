@@ -43,15 +43,19 @@
 							<button class="btn btn-primary">Primary</button>
 						</div>
 					</form>
-
 				</div>
 				<hr>
 			</div>
-			{% block animal %}
-				{% include 'Component/_animal.html.twig' %}
-			{% endblock %}
-			{% block arme %}
-				{% include 'Component/_arme.html.twig' %}
-			{% endblock %}
-		</main>
-	{% endblock %}
+			<hr>
+		</div>
+		{% block gauge %}
+			{% include '/Component/_gauge.html.twig' %}
+		{% endblock %}
+		{% block animal %}
+			{% include 'Component/_animal.html.twig' %}
+		{% endblock %}
+		{% block arme %}
+			{% include 'Component/_arme.html.twig' %}
+		{% endblock %}
+	</main>
+{% endblock %}

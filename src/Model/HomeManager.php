@@ -224,4 +224,15 @@ class HomeManager extends AbstractManager
             ],
         ];
     }
+
+    public function getGauges(): array
+    {
+        return [
+            '1' => 'Maladie',
+            '2' => 'Catastrophe naturelle',
+            '3' => 'Contamination radioactive',
+            '4' => 'Séquestration par enlèvement',
+            '5' => 'Recevoir des projectiles',
+        ];
+    }
 }

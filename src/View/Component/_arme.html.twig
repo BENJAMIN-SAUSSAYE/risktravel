@@ -1,9 +1,11 @@
 {% for listArme in listArmes %}
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="{{ "assets/images/" ~ listArme.img }}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ listArme.name }}</h5>
-    <p class="card-text">{{ listArme.description }}</p>
-  </div>
-</div>
+	<div class="container col-md-12">
+		<div class="card d-flex flex-row">
+			<img class="card-img-top w-50" src="{{ "assets/images/" ~ listArme.img }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ listArme.name }}</h5>
+				<p class="card-text">{{ listArme.description }}</p>
+			</div>
+		</div>
+	</div>
 {% endfor %}

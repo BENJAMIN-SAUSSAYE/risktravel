@@ -1,0 +1,16 @@
+<div class="container justify-content-center">
+	<ul>
+		{% for gauge in gauges %}
+			<li style="list-style-type: none;">
+				<div>
+					<label for=" namegauge">{{ gauge }}</label>
+				</div>
+				<div class="progress bg-dark" style="height: 2rem;">
+					<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+						<span class="text-white bg-danger d-flex align-items-center justify-content-center" style="height: 2rem;"><img src="/assets/images/human-skull.png" style="width: 2rem;" alt=""></span>
+					</div>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
