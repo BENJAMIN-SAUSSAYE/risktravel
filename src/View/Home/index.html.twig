@@ -2,39 +2,49 @@
 {% block stylesheet %}
 	{{ parent() }}
 {% endblock %}
-{% block header %}{% endblock %}
-{% block content %}
-	<main role="main">
+{% block header %}
+	<header>
 		<div class="bg-secondary-subtle">
 			<div class="container py-4">
-				<h1 class="display-3">Hello, world!</h1>
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<p>
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>
-				</p>
+				<h1 class="display-3">TRAVEL RISK</h1>
+				<p>Vous aimez le gout du risque ?<br>
+					Nous vous prorposons des voyages FUN !</p>
+				<hr>
 			</div>
 		</div>
+	</header>
+{% endblock %}
+{% block content %}
+	<main role="main">
 		<div class="container py-4">
 			<div class="row justify-content-between align-items-center">
-				<div class="col-md-3 shadow-sm rounded">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+				<div
+					class="col-md-12 shadow-sm rounded">
+
+					<!--dropdown DEPART  -->
+					<div class="input-group mb-3">
+						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+							<option selected>Depart...</option>
+							<option value="Allemagne">Allemagne</option>
+							<option value="France">France</option>
+							<option value="Italie">Italie</option>
+						</select>
+					</div>
+					<!--dropdown DEPART  -->
+
+					<!--dropdown ARRIVEE  -->
+					<div class="input-group mb-3">
+						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+							<option selected>Arrivée...</option>
+							<option value="Congo">Congo</option>
+							<option value="Russie">Russie</option>
+							<option value="Chine">Chine</option>
+						</select>
+					</div>
+
+					<!--dropdown ARRIVEE  -->
 					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details »</a>
-					</p>
-				</div>
-				<div class="col-md-3 shadow-sm rounded">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details »</a>
-					</p>
-				</div>
-				<div class="col-md-3 shadow-sm rounded">
-					<h2>Heading</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details »</a>
+						<a class="btn btn-secondary" href="#" role="button">Valider</a>
 					</p>
 				</div>
 			</div>
