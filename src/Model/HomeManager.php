@@ -91,7 +91,7 @@ class HomeManager extends AbstractManager
                 Il est le plus grand carnivore d\'Afrique et le deuxième plus grand félidé après le tigre. 
                 Il est surnommé le Roi des animaux du fait de son imposant charisme et de sa crinière qui rappelle 
                 le soleil.',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'tigre.webp',
@@ -100,7 +100,7 @@ class HomeManager extends AbstractManager
                 tigris est le plus grand félin sauvage et l\'un des plus grands carnivores terrestres.
                 Super-prédateur, il chasse principalement les cerfs et les sangliers, bien qu\'il puisse s\'attaquer
                 à des proies de taille plus importante comme les buffles.',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'hyene.webp',
@@ -109,7 +109,7 @@ class HomeManager extends AbstractManager
                 oreilles en pointe, de hautes pattes et une queue mi-longue pourvue d\'une touffe. L\'avant du corps 
                 est puissant et le pelage marron tacheté de noir est souvent ébouriffé. Sa longueur varie de 95 à 
                 165 cm, pour un poids compris entre 15 et 85 kg.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
             [
                 'img' => 'guepard.jpg',
@@ -118,7 +118,7 @@ class HomeManager extends AbstractManager
                 son allure svelte et ses membres élancés. Peu endurant et souvent bredouille dans ses chasses, il doit 
                 ensuite se reposer longuement pour récupérer de ses courses et est très exposé aux autres prédateurs 
                 comme la hyène tachetée.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
             [
                 'img' => 'ours.jpg',
@@ -127,7 +127,7 @@ class HomeManager extends AbstractManager
                  un long museau, un pelage dense, des pattes plantigrades à cinq griffes non rétractiles et une
                   queue courte. L\'ours blanc est principalement carnassier. Le panda géant se nourrit presque 
                   exclusivement de bambou.',
-                'risk_level' => '5',
+                'risk_level' => 5,
             ],
             [
                 'img' => 'alligator.jpg',
@@ -136,7 +136,7 @@ class HomeManager extends AbstractManager
                  est un reptile carnivore appartenant à la famille des alligatoridés et vivant sur le continent 
                  américain, en Floride principalement. A la différence du crocodile, il a son museau plus large 
                  et arrondi.',
-                'risk_level' => '5',
+                'risk_level' => 5,
             ],
             [
                 'img' => 'orque.webp',
@@ -145,7 +145,7 @@ class HomeManager extends AbstractManager
                 taille de sa nageoire dorsale qui peut atteindre 2 m de hauteur chez les mâles alors qu\'elle ne 
                 dépasse pas 90 cm chez les femelles (la différence de taille de cette nageoire entre les mâles et
                  les femelles constitue ce qu\'on appelle le ...',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'requin.jpg',
@@ -154,7 +154,7 @@ class HomeManager extends AbstractManager
                 et ses nageoires pectorales et dorsales, ainsi que sa nageoire caudale hétérocerque 
                 (de forme asymétrique). Il est pourvu d\'un squelette entièrement cartilagineux et de cinq à sept 
                 fentes branchiales latérales selon les espèces.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
             [
                 'img' => 'serpent.jpg',
@@ -163,14 +163,14 @@ class HomeManager extends AbstractManager
                  et de l\'ordre des squamates. L\'ensemble des serpents forme le sous-ordre des Serpentes. 
                  La famille qui inclut les lézards et des serpents s\'appelle les sauriens. Ce sont des vertébrés 
                  ovipares : ils pondent des œufs pour se reproduire.',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'loup.jpg',
                 'name' => 'Loup',
                 'description' => 'La silhouette générale du Loup ressemble à celle d\'un chien de berger mais avec 
                 un avant-train plus puissant.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
             [
                 'img' => 'elephant.jpg',
@@ -178,7 +178,7 @@ class HomeManager extends AbstractManager
                 'description' => 'Un éléphant d\'Afrique mâle adulte mesure 3,50 mètres au garrot et pèse 5 à 
                 6 tonnes, une femelle adulte mesure 3 mètres de haut au garrot pour une masse de 4 tonnes environ. 
                 À la naissance, l\'éléphant pèse environ 120 kg . Un éléphant vit en moyenne 60 ans.',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'scorpion.jpg',
@@ -187,7 +187,7 @@ class HomeManager extends AbstractManager
                 et reconnu dans ce qu\'il fait. Le natif est ambitieux et n\'a pas peur du danger. Il aime 
                 défier les interdits, éprouver de fortes sensations, tester ses limites. Enfant,
                  l\'homme Scorpion était sûrement casse-cou !',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
 
         ];
@@ -202,7 +202,7 @@ class HomeManager extends AbstractManager
                 'description' => 'Une mine terrestre est une charge explosive conçue et placée de façon à
                  être déclenchée, par l\'action involontaire de l\'ennemi, au passage de personnes ou 
                  de véhicules.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
             [
                 'img' => 'drone_de_combat.jpg',
@@ -211,7 +211,7 @@ class HomeManager extends AbstractManager
                 de matériel d\'observation et/ou d\'armements divers. Il doit être distingué du drone
                 suicide, aussi appelé "munition rôdeuse", qui est également un drone de combat, mais
                 constitue lui-même la munition principale.',
-                'risk_level' => '3',
+                'risk_level' => 3,
             ],
             [
                 'img' => 'missile.jpg',
@@ -219,7 +219,7 @@ class HomeManager extends AbstractManager
                 'description' => 'missile. Projectile faisant partie d\'un système d\'arme à charge 
                 militaire classique ou nucléaire doté d\'un système de propulsion autonome et guidé sur toute
                 ou partie de sa trajectoire par autoguidage ou téléguidage.',
-                'risk_level' => '5',
+                'risk_level' => 5,
             ],
             [
                 'img' => 'torpille.png',
@@ -228,7 +228,7 @@ class HomeManager extends AbstractManager
                 équipe tous les types de sous-marins, mais aussi certains bâtiments de surface et des avions.
                 Une torpille moderne se présente typiquement comme un cylindre de 6 m de long pour 30 à 70 cm 
                 de diamètre et une masse de l\'ordre de 1 t',
-                'risk_level' => '5',
+                'risk_level' => 5,
             ],
             [
                 'img' => 'groupe_terroriste.jpg',
@@ -237,40 +237,88 @@ class HomeManager extends AbstractManager
                 ou religieuses. Les multiples définitions varient sur : l\'usage de la violence,
                 les techniques utilisées, la nature du sujet, l\'usage de la peur, le niveau d\'organisation,
                 l\'idéologie, etc.',
-                'risk_level' => '4',
+                'risk_level' => 4,
             ],
         ];
     }
 
-    public function getRandomRisk(array $risks, bool $isCards, float $riskScore): array
+    public function getRandomRisk(array $risks, string $type, float $riskScore): array
     {
-        $results = [];
-        if ($isCards) {
-            $nbrElements = (int)floor(count($risks) * 1 / 3);
-            $results = array_rand($risks, $nbrElements);
-        } else {
-            $filteredRiskbyCode = [];
-            //filtre sur le score de risk
-            $nbrElements = count($risks);
-            for ($i = 0; $i < $nbrElements; $i++) {
-                if ($risks[$i]['risk_level'] == strval(floor($riskScore))) {
-                    $filteredRiskbyCode[] = $risks[$i];
-                }
-            }
-            //retourne un nombre aleatoire d'elements du tableau filtré
-            $nbrElements = (int)floor(count($filteredRiskbyCode) * 1 / 3);
-            $results = array_rand($filteredRiskbyCode, $nbrElements);
+        $result = [];
+
+        if ($type === 'gauges') {
+            $result = $this->getGaugesRandom($risks, $riskScore);
         }
-        return $results;
+
+        if ($type === 'armes') {
+            $result = $this->getArmsRandom($risks, $riskScore);
+        }
+
+        if ($type === 'animals') {
+            $result = $this->getAnimalsRandom($risks, $riskScore);
+        }
+
+        return $result;
     }
+
+    private function getGaugesRandom(array $risks, float $riskScore): array
+    {
+        $count = count($risks);
+        for ($j = 0; $j < $count; $j++) {
+            //affecte un scrore de risk au gauge.
+            $currentScore = $risks[$j]['score'];
+            $minScrore = (int)$currentScore  * (int)floor(($riskScore * 0.5));
+            $risks[$j]['score'] = rand($minScrore, 100);
+        }
+        return $risks;
+    }
+
+    private function getArmsRandom(array $risks, float $riskScore): array
+    {
+        $filteredRiskbyCode = [];
+        //filtre le tableau sur le score de risk
+        $count = count($risks);
+        for ($i = 0; $i < $count; $i++) {
+            if ($risks[$i]['risk_level'] === (int)(floor($riskScore))) {
+                $filteredRiskbyCode[] = $risks[$i];
+            }
+        }
+
+        return $filteredRiskbyCode;
+    }
+
+    private function getAnimalsRandom(array $risks, float $riskScore): array
+    {
+        $filteredRiskbyCode = [];
+        //filtre le tableau sur le score de risk
+        $count = count($risks);
+        for ($i = 0; $i < $count; $i++) {
+            if ($risks[$i]['risk_level'] == (int)(floor($riskScore))) {
+                $filteredRiskbyCode[] = $risks[$i];
+            }
+        }
+        //recupère les clés aleatoire des elements du tableau filtré
+        $nbrElements = (int)floor(count($filteredRiskbyCode) / 2);
+        $randomKeys = array_rand($filteredRiskbyCode, $nbrElements);
+        $randomRisks = [];
+        if (is_int($randomKeys)) {
+            $randomRisks[] = $filteredRiskbyCode[$randomKeys];
+        } else {
+            for ($i = 0; $i < $nbrElements; $i++) {
+                $randomRisks[] = $filteredRiskbyCode[$randomKeys[$i]];
+            }
+        }
+        return $randomRisks;
+    }
+
     public function getGauges(): array
     {
         return [
-            '1' => 'Maladie',
-            '2' => 'Catastrophe naturelle',
-            '3' => 'Contamination radioactive',
-            '4' => 'Séquestration par enlèvement',
-            '5' => 'Recevoir des projectiles',
+            ['type' => 'Maladie', 'score' => 15],
+            ['type' => 'Catastrophe naturelle', 'score' => 25],
+            ['type' => 'Contamination radioactive', 'score' => 30],
+            ['type' => 'Séquestration par enlèvement', 'score' => 10],
+            ['type' => 'Recevoir des projectiles', 'score' => 5],
         ];
     }
 }

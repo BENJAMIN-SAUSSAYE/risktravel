@@ -16,6 +16,10 @@ class HomeController extends AbstractController
         $listCountriesRisk = $homeManager->getCountryRisk();
         $gauges = $homeManager->getGauges();
 
+        // $result1 = $homeManager->getRandomRisk($gauges, 'gauges', 5);
+        // $result2 = $homeManager->getRandomRisk($listArmes, 'armes', 5);
+        // $result3 = $homeManager->getRandomRisk($listAnimals, 'animals', 5);
+
         return $this->twig->render('Home/index.html.twig', [
             'listCountriesRisk' => $listCountriesRisk,
             'listAnimals' => $listAnimals,
