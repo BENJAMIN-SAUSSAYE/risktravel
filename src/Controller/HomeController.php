@@ -17,7 +17,14 @@ class HomeController extends AbstractController
         $homeManager = new HomeManager();
 
         $listCountriesRisk = $homeManager->getCountryRisk();
+        $listCountries = $homeManager->getEuropeanCountries();
 
-        return $this->twig->render('Home/index.html.twig', ['listCountriesRisk' => $listCountriesRisk]);
+        return $this->twig->render(
+            'Home/index.html.twig',
+            [
+                'listCountriesRisk' => $listCountriesRisk,
+                'listCountries' => $listCountries,
+            ]
+        );
     }
 }
