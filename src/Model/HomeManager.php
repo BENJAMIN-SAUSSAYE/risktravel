@@ -4,14 +4,13 @@ namespace App\Model;
 
 class HomeManager extends AbstractManager
 {
-    public function getCountryRisk() : ?array
+    /*public function getCountryRisk() : ?array
     {
         //TODO CALL API 
-
         return new array();
-    }
+    }*/
 
-    public function getEuropeanCountries() :?array
+    public function getEuropeanCountries(): ?array
     {
         return [
             'AT' => 'Austria',
@@ -44,5 +43,15 @@ class HomeManager extends AbstractManager
             'SK' => 'Slovakia',
         ];
     }
-    
+
+    public function getGauges(): array
+    {
+        return [
+            '1' => 'illness',
+            '2' => 'natural disaster',
+            '3' => 'Contamination radioactive',
+            '4' => 'kidnap sequestration',
+            '5' => 'receive projectiles',
+        ];
+    }
 }

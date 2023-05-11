@@ -15,9 +15,15 @@ class HomeController extends AbstractController
     {
         //CALL API FROM HomeManager--> return ARRAY from JSON
         $homemanager = new HomeManager();
-        $listCountriesRisk = $homemanager->getCountryRisk();
+        // $listCountriesRisk = $homemanager->getCountryRisk();
+        $gauges = $homemanager->getGauges();
 
-
-        return $this->twig->render('Home/index.html.twig', ['listCountriesRisk' => $listCountriesRisk]);
+        return $this->twig->render(
+            'Home/index.html.twig',
+            [
+                //'listCountriesRisk' => $listCountriesRisk,
+                'gauges' => $gauges,
+            ]
+        );
     }
 }
