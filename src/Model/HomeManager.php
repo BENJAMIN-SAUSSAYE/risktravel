@@ -37,6 +37,21 @@ class HomeManager extends AbstractManager
         return $countries;
     }
 
+    // public function getItineraire(): array
+    // {
+    //     $client = HttpClient::create();
+
+    //     $response = $client->request('GET',
+    //  'http://router.project-osrm.org/route/v1/driving/13.388860,52.517037;13.397634,52.529407;13.428555,52.52');
+    //     $statusCode = $response->getStatusCode();
+    //     $type = $response->getHeaders()['content-type'][0];
+    //     $waypoints = [];
+
+    //     var_dump($waypoints);
+    //     exit;
+    //     return $waypoints;
+    // }
+
     public function getEuropeanCountries(): ?array
     {
         $firstCountriesList = [];
