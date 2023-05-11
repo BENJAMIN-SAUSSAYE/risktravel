@@ -14,10 +14,10 @@ class HomeController extends AbstractController
     public function index(): string
     {
         //CALL API FROM HomeManager--> return ARRAY from JSON
-        $homemanager = new HomeManager();
-        $listCountriesRisk = $homemanager->getCountryRisk();
+        $homeManager = new HomeManager();
+        $listAnimals = $homeManager->getAnimals();
+        $listArmes = $homeManager->getArmes();
 
-
-        return $this->twig->render('Home/index.html.twig', ['listCountriesRisk' => $listCountriesRisk]);
+        return $this->twig->render('Home/index.html.twig', ['listAnimals' => $listAnimals, 'listArmes' => $listArmes]);
     }
 }

@@ -50,5 +50,14 @@
 			</div>
 			<hr>
 		</div>
+	{% block animal %}
+		{% include 'Component/_animal.html.twig' %}
+	{% endblock %}
+	{% block arme %}
+		{% include 'Component/_arme.html.twig' %}
+	{% endblock %}
+	{% block attack %}
+		{% include 'Component/_attack.html.twig' %}
+	{% endblock %}
 	</main>
 {% endblock %}
