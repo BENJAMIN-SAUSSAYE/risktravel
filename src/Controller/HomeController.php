@@ -2,29 +2,23 @@
 
 namespace App\Controller;
 
-use App\Model\ActualityManager;
 use App\Controller\AbstractController;
 use App\Model\HomeManager;
 
 class HomeController extends AbstractController
 {
-    /**
-     * Display home page
-     */
-    public function index(): string
-    {
-        //CALL API FROM HomeManager--> return ARRAY from JSON
-        $homeManager = new HomeManager();
+        public function index(): string
+        {
+                //CALL API FROM HomeManager--> return ARRAY from JSON
+                $homeManager = new HomeManager();
+                $listAnimals = $homeManager->getAnimals();
+                $listArmes = $homeManager->getArmes();
+                $listCountriesRisk = $homeManager->getCountryRisk();
 
-        $listCountriesRisk = $homeManager->getCountryRisk();
-        $listCountries = $homeManager->getEuropeanCountries();
-
-        return $this->twig->render(
-            'Home/index.html.twig',
-            [
-                'listCountriesRisk' => $listCountriesRisk,
-                'listCountries' => $listCountries,
-            ]
-        );
-    }
+                return $this->twig->render('Home/index.html.twig', [
+                        'listCountriesRisk' => $listCountriesRisk,
+                        'listAnimals' => $listAnimals,
+                        'listArmes' => $listArmes
+                ]);
+        }
 }
