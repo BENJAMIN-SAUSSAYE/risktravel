@@ -39,7 +39,9 @@ class HomeManager extends AbstractManager
 
     public function getEuropeanCountries(): ?array
     {
-        return [
+        $firstCountriesList = [];
+
+        $firstCountry = [
             'AT' => 'Austria',
             'BE' => 'Belgium',
             'BG' => 'Bulgaria',
@@ -69,6 +71,14 @@ class HomeManager extends AbstractManager
             'SI' => 'Slovenia',
             'SK' => 'Slovakia',
         ];
+
+        foreach ($firstCountry as $isoAlpha2 => $name) {
+            $firstCountriesList[] = [
+                'iso_alpha2' => $isoAlpha2,
+                'name' => $name,
+            ];
+        }
+        return $firstCountriesList;
     }
 
     public function getAnimals(): array
