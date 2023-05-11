@@ -35,10 +35,11 @@
 					<!--dropdown ARRIVEE  -->
 					<div class="input-group mb-3">
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							<option selected>Arrivée...</option>
-							<option value="Congo">Congo</option>
-							<option value="Russie">Russie</option>
-							<option value="Chine">Chine</option>
+							{% for listCountryRisk in listCountriesRisk %}
+								{% if listCountryRisk['score'] >= 3 %}
+									<option selected>{{ listCountryRisk['name'] }}</option>
+								{% endif %}
+							{% endfor %}
 						</select>
 					</div>
 
