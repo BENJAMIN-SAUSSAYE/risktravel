@@ -44,6 +44,7 @@ class HomeController extends AbstractController
             'errors' => $errors,
             'listCountries' => $listCountries,
             'listCountriesRisk' => $listCountriesRisk,
+            // TODO renommer listAnimals et listArmes par les nouvelles variables du dessus
             'listAnimals' => $listAnimals,
             'listArmes' => $listArmes,
             // 'gauges' => $gaugesRisk,
