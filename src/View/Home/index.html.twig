@@ -24,10 +24,9 @@
 					<!--dropdown DEPART  -->
 					<div class="input-group mb-3">
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-							<option selected>Depart...</option>
-							<option value="Allemagne">Allemagne</option>
-							<option value="France">France</option>
-							<option value="Italie">Italie</option>
+							{% for listCountry in listCountries %}
+								<option selected>{{ listCountry.name }}</option>
+							{% endfor %}
 						</select>
 					</div>
 					<!--dropdown DEPART  -->
