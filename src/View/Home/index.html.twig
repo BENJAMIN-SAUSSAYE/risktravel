@@ -36,7 +36,7 @@
 					<div class="input-group mb-3">
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 							{% for listCountryRisk in listCountriesRisk %}
-								{% if listCountryRisk['score'] >= 5 %}
+								{% if listCountryRisk['score'] >= 3 %}
 									<option selected>{{ listCountryRisk['name'] }}</option>
 								{% endif %}
 							{% endfor %}

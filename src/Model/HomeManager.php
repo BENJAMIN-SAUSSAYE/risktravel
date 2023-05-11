@@ -23,6 +23,7 @@ class HomeManager extends AbstractManager
 
             if (!empty($countries)) {
                 $countriesList = [];
+
                 foreach ($countries['data'] as $country) {
                     $isoAlpha2 = $country['iso_alpha2'];
                     $name = $country['name'];
