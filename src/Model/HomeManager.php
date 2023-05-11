@@ -245,14 +245,14 @@ class HomeManager extends AbstractManager
     public function getRandomRisk(array $risks, bool $isCards, float $riskScore): array
     {
         $results = [];
-
         if ($isCards) {
             $nbrElements = (int)floor(count($risks) * 1 / 3);
             $results = array_rand($risks, $nbrElements);
         } else {
             $filteredRiskbyCode = [];
             //filtre sur le score de risk
-            for ($i = 0; $i < count($risks); $i++) {
+            $nbrElements = count($risks);
+            for ($i = 0; $i < $nbrElements; $i++) {
                 if ($risks[$i]['risk_level'] == strval(floor($riskScore))) {
                     $filteredRiskbyCode[] = $risks[$i];
                 }
@@ -261,7 +261,16 @@ class HomeManager extends AbstractManager
             $nbrElements = (int)floor(count($filteredRiskbyCode) * 1 / 3);
             $results = array_rand($filteredRiskbyCode, $nbrElements);
         }
-
         return $results;
+    }
+    public function getGauges(): array
+    {
+        return [
+            '1' => 'Maladie',
+            '2' => 'Catastrophe naturelle',
+            '3' => 'Contamination radioactive',
+            '4' => 'Séquestration par enlèvement',
+            '5' => 'Recevoir des projectiles',
+        ];
     }
 }
