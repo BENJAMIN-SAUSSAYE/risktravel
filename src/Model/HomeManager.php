@@ -336,4 +336,19 @@ class HomeManager extends AbstractManager
             ['type' => 'Recevoir des projectiles', 'score' => 5],
         ];
     }
+
+    public function getWayPoints(string $country): array
+    {
+        $waypoint = [];
+        $client = HttpClient::create();
+        //https://api.mapbox.com/geocoding/v5/mapbox.places/france.json?proximity=ip&language=fr&access_token=pk.eyJ1IjoiYmVuamFtaW4tc2F1c3NheWUiLCJhIjoiY2xoa2RpYXFrMHFvbzNwcDE0enZ4aTJtMCJ9.Ii592HL7Q9BbvU3tBzjT1w
+        $response = $client->request('GET', 'https://api.mapbox.com/geocoding/v5/mapbox.places/' . $country . '.json?proximity=ip&language=fr&access_token=pk.eyJ1IjoiYmVuamFtaW4tc2F1c3NheWUiLCJhIjoiY2xoa2RpYXFrMHFvbzNwcDE0enZ4aTJtMCJ9.Ii592HL7Q9BbvU3tBzjT1w');
+        $statusCode = $response->getStatusCode();
+        $type = $response->getHeaders()['content-type'][0];
+        if ($statusCode === 200 && $type === "application/vnd.geo+json; charset=utf-8") {
+            $waypoint = $response->getContent();
+            $waypoint = $response->toArray()['features'][0]['center'];
+        }
+        return $waypoint;
+    }
 }

@@ -33,6 +33,9 @@ class HomeController extends AbstractController
                 $riskScore = explode("|", $data['country-destination'])[1];
                 $countryDestination = explode("|", $data['country-destination'])[0];
                 $countryStarting = $data['country-starting'];
+                $startWayPoints = $homeManager->getWayPoints($countryStarting);
+                $endWayPoints = $homeManager->getWayPoints($countryDestination);
+
                 //$kiloMeters = $homeManager->getDistance($countryDestination, $countryStarting);
                 $listAnimals = $homeManager->getRandomRisk(
                     $homeManager->getAnimals(),
