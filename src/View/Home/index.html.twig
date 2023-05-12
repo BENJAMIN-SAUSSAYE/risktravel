@@ -49,6 +49,9 @@
 			</div>
 			<hr>
 		</div>
+		{% block _distance %}
+			{% include '/Component/_distance.html.twig' %}
+		{% endblock %}
 		{% block gauge %}
 			{% include '/Component/_gauge.html.twig' %}
 		{% endblock %}
