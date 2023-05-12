@@ -35,8 +35,9 @@ class HomeController extends AbstractController
                 $countryStarting = $data['country-starting'];
                 $startWayPoints = $homeManager->getWayPoints($countryStarting);
                 $endWayPoints = $homeManager->getWayPoints($countryDestination);
-
-                //$kiloMeters = $homeManager->getDistance($countryDestination, $countryStarting);
+                $kmsAndHours = $homeManager->getRoute($startWayPoints, $endWayPoints);
+                $kiloMeters = $kmsAndHours['kms'];
+                $walkHours =  $kmsAndHours['hours'];
                 $listAnimals = $homeManager->getRandomRisk(
                     $homeManager->getAnimals(),
                     'animals',
@@ -52,7 +53,6 @@ class HomeController extends AbstractController
                     'gauges',
                     (float)$riskScore
                 );
-                // $walkDays = $homeManager->getWalkDays($kiloMeters);
             }
         }
 
@@ -67,8 +67,8 @@ class HomeController extends AbstractController
             'gauges' => $gauges,
             'countryDestination' => $countryDestination,
             'riskScore' => $riskScore,
-            'kiloMeters' => $kiloMeters = 20,
-            'walkDays' =>  $walkDays = 5,
+            'kiloMeters' => $kiloMeters,
+            'walkHours' =>  $walkHours,
         ]);
     }
 }
