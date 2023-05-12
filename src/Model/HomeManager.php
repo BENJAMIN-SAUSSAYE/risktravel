@@ -351,4 +351,27 @@ class HomeManager extends AbstractManager
         }
         return $waypoint;
     }
+
+
+    public function getRoute(array $startWaypoint, array $endWaypoint): array
+    {
+        $route = [];
+        $client = HttpClient::create();
+        //https://api.mapbox.com/directions/v5/mapbox/walking/2.3483915%2C48.8534951%3B10.0183432948567%2C51.1334813439932?alternatives=false&continue_straight=true&geometries=geojson&language=fr&overview=simplified&steps=true&access_token=YOUR_MAPBOX_ACCESS_TOKEN
+        $url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' .
+            $startWaypoint[0] . '%2C' .
+            $startWaypoint[1] . '%3B' .
+            $endWaypoint[0] . '%2C' .
+            $endWaypoint[1] .
+            '?alternatives=false&continue_straight=true&geometries=geojson&language=fr&overview=simplified&steps=true&access_token=pk.eyJ1IjoiYmVuamFtaW4tc2F1c3NheWUiLCJhIjoiY2xoa2RpYXFrMHFvbzNwcDE0enZ4aTJtMCJ9.Ii592HL7Q9BbvU3tBzjT1w';
+        $response = $client->request('GET', $url);
+        $statusCode = $response->getStatusCode();
+        $type = $response->getHeaders()['content-type'][0];
+        if ($statusCode === 200 && $type === "application/json; charset=utf-8") {
+            $route = $response->getContent();
+            $route = $response->toArray()['routes'][0];
+            $result = ['kms' => floor($route['distance'] / 1000),  'hours' => floor($route['duration'] / 60 / 60)];
+        }
+        return $result;
+    }
 }

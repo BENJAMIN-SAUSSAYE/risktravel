@@ -1,13 +1,17 @@
-{% if kiloMeters is not empty and walkDays is not empty %}
+{% if kiloMeters is not empty and walkHours is not empty %}
 	<div class="container text-center">
 		<div class="d-flex flex-row justify-content-between my-2 py-2">
 			<div class="w-50 px-2">
 				<img src="assets/images/walk.png" style="max-width:15%;">
-				<h4>Distance{{ kiloMeters }}km</h4>
+				<h4>Distance
+					{{ kiloMeters }}
+					km(s)</h4>
 			</div>
 			<div class="w-50 px-2 align-self-end">
 				<img src="assets/images/day.png" style="max-width:15%;">
-				<h4>Durée{{ walkDays }}jour(s)</h4>
+				<h4>Durée
+					{{ walkHours }}
+					heure(s)</h4>
 			</div>
 		</div>
 	</div>
