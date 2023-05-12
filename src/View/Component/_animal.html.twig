@@ -1,12 +1,11 @@
-{% for listAnimal in listAnimals %}
-
-	<div class="container col-md-12">
+<div class="container justify-content-center my-2 py-2">
+	{% for listAnimal in listAnimals %}
 		<div class="card d-flex flex-row">
-			<img class="card-img-top w-50" src="{{ "assets/images/" ~ listAnimal.img }}" alt="Card image cap">
-			<div class="card-body">
+			<div class="img" style="max-width:20%;"><img class="img-thumbnail rounded float-left" src="{{ "assets/images/" ~ listAnimal.img }}" alt="Card image cap"></div>
+			<div class="card-body w-70">
 				<h5 class="card-title">{{ listAnimal.name }}</h5>
 				<p class="card-text">{{ listAnimal.description }}</p>
 			</div>
 		</div>
-	</div>
-{% endfor %}
+	{% endfor %}
+</div>
