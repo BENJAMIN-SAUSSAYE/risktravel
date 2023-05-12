@@ -1,10 +1,13 @@
 <div class="container justify-content-center my-2 py-2">
 	{% for listAnimal in listAnimals %}
 		<div class="card d-flex flex-row">
-			<div class="img" style="max-width:20%;"><img class="img-thumbnail rounded float-left" src="{{ "assets/images/" ~ listAnimal.img }}" alt="Card image cap"></div>
+			<div class="img" style="max-width:20%;"><img class="img-thumbnail rounded float-left w-20" src="{{ "assets/images/" ~ listAnimal.img }}" alt="Card image cap"></div>
 			<div class="card-body w-70">
 				<h5 class="card-title">{{ listAnimal.name }}</h5>
 				<p class="card-text">{{ listAnimal.description }}</p>
+			</div>
+			<div style="min-width:10%;" class="bg-danger d-flex flex-column text-center justify-content-center align-item-center w-20" style="max-width:20%;">
+				<h2 style="color:white">{{ listAnimal.risk_level }}</h2>
 			</div>
 		</div>
 	{% endfor %}
