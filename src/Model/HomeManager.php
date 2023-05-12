@@ -369,8 +369,12 @@ class HomeManager extends AbstractManager
         $type = $response->getHeaders()['content-type'][0];
         if ($statusCode === 200 && $type === "application/json; charset=utf-8") {
             $route = $response->getContent();
-            $route = $response->toArray()['routes'][0];
-            $result = ['kms' => floor($route['distance'] / 1000),  'hours' => floor($route['duration'] / 60 / 60)];
+            if (!empty($response->toArray()['routes'][0])) {
+                $route = $response->toArray()['routes'][0];
+                $result = ['kms' => floor($route['distance'] / 1000),  'hours' => floor($route['duration'] / 60 / 60)];
+            } else {
+                $result = ['kms' => floor(rand(-100000, -190000000) / 1000),  'hours' => floor(rand(-1580, -158000) / 60 / 60)];
+            }
         }
         return $result;
     }

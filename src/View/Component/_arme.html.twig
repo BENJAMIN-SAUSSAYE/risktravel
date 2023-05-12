@@ -6,6 +6,9 @@
 				<h5 class="card-title">{{ listArme.name }}</h5>
 				<p class="card-text">{{ listArme.description }}</p>
 			</div>
+			<div style="min-width:10%;" class="bg-danger d-flex flex-column text-center justify-content-center align-item-center w-20" style="max-width:20%;">
+				<h2 style="color:white">{{ listArme.risk_level }}</h2>
+			</div>
 		</div>
 	{% endfor %}
 </div>
