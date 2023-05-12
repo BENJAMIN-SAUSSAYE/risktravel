@@ -66,6 +66,7 @@ class HomeController extends AbstractController
             'listArmes' => $listArmes,
             'gauges' => $gauges,
             'countryDestination' => $countryDestination,
+            'countryStarting' => $countryStarting,
             'riskScore' => $riskScore,
             'kiloMeters' => $kiloMeters,
             'walkHours' =>  $walkHours,
